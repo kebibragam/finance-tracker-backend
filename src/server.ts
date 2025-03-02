@@ -31,6 +31,7 @@ process.on("SIGINT", async () => {
 // Initialize Express App
 const app = express();
 app.disable("x-powered-by");
+app.set("trust proxy", 1);
 
 // Global Middleware
 app.use(express.json());
